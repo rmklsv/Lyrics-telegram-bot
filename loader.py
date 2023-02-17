@@ -70,10 +70,10 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-    await message.answer('Yo!\nI'll help you to chat '
-                        'using hip-hop lyrics. '
+    await message.answer('Hi!\nI'll help you to chat '
+                        'using lyrics. '
                         'Try me in any chat, '
-                        'just type: @hh_lyrics_bot '
+                        'just type: @"botname" '
                         'and some word or phrase. '
                         'I'll find the matching lines '
                         'from the lyrics and you can '
@@ -87,7 +87,7 @@ async def inline_search(inline_query: types.InlineQuery):
         results = []
         for i, lyrics_lines in enumerate(lyrics):
             results.append(types.InlineQueryResultArticle(
-                id=i, title='Kizaru',
+                id=i, title='Lyrics',
                 description=lyrics_lines,
                 input_message_content=types.InputTextMessageContent(
                     message_text=lyrics_lines
