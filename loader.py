@@ -70,14 +70,14 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-    await message.answer('Hi!\nI'll help you to chat '
-                        'using lyrics. '
-                        'Try me in any chat, '
-                        'just type: @"botname" '
-                        'and some word or phrase. '
-                        'I'll find the matching lines '
-                        'from the lyrics and you can '
-                        'choose and send them to a chat.')
+    await message.answer("Hi!\nI'll help you to chat "
+                        "using lyrics. "
+                        "Try me in any chat, "
+                        "just type: @'botname' "
+                        "and some word or phrase. "
+                        "I'll find the matching lines "
+                        "from the lyrics and you can "
+                        "choose and send them to a chat.")
 
 
 @dp.inline_handler()
