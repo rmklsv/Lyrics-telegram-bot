@@ -14,7 +14,7 @@ def search_lyrics(text: str) -> set:
         lyrics = tasks.readlines()
         for i, line in enumerate(lyrics):
             if len(words) == 1:
-                if words[0] in re.sub(r'[^\w\s]', '', line.lower()).split():
+                if words[0] in re.sub(r'[^\w\s]', ' ', line.lower()).split():
                     if i > 0:
                         prev_line = lyrics[i-1]
                     else:
